@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills - Vishnu Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    html, body {
+      width: 100%;
+      min-height: 100vh;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 20px 40px;
+      background-color: rgba(0, 0, 0, 0.4);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo-port {
+      font-size: 28px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .navlinks a,
+    .dropbtn {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 14px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .navlinks a:hover,
+    .dropbtn:hover {
+      color: #ffba08;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropbtn::after {
+      content: " ▼";
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.85);
+      border-radius: 6px;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      z-index: 10;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-size: 15px;
+    }
+
+    .dropdown-content a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 40px 0 30px;
+      color: #ffba08;
+      font-size: 2rem;
+    }
+
+    .main-section {
+      display: flex;
+      justify-content: center;
+      padding: 30px 20px 60px;
+    }
+
+    .box {
+      background-color: rgba(255,255,255,0.08);
+      backdrop-filter: blur(6px);
+      border-radius: 12px;
+      width: 100%;
+      max-width: 500px;
+      padding: 30px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .box:hover {
+      transform: scale(1.03);
+    }
+
+    .skill {
+      margin-bottom: 30px;
+    }
+
+    .skill h3 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .skill-icon {
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    .skill-bar {
+      width: 100%;
+      height: 16px;
+      background: #48cae4;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .fill-bar {
+      height: 100%;
+      border-radius: 10px;
+      background: #0077b6;
+      width: 0;
+      animation: grow 2s ease forwards;
+    }
+
+    .html   { animation-delay: 0s;   width: 80%; }
+    .git    { animation-delay: 0.2s; width: 70%; }
+    .python { animation-delay: 0.3s; width: 80%; }
+    .django { animation-delay: 0.4s; width: 60%; }
+    .figma  { animation-delay: 0.5s; width: 80%; }
+
+    @keyframes grow {
+      from { width: 0; opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .navlinks {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .box {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="index.html" class="logo-port">Portfolio</a>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skill.html">Skills</a>
+      <a href="pro.html">Projects</a>
+      <a href="certi.html">Certificates</a>
+      <div class="dropdown">
+        <button class="dropbtn">Contact</button>
+        <div class="dropdown-content">
+          <a href="https://github.com/vishnuvardhan118" target="_blank">Github</a>
+          <a href="https://www.linkedin.com/in/vishnu-vardhan-693148290/" target="_blank">LinkedIn</a>
+          <a href="mailto:vishnu118k@gmail.com">Gmail</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Skills Section -->
+  <h2>My Skills</h2>
+  <div class="main-section">
+    <div class="box">
+      <div class="skill">
+        <h3><span><img src="HTML CSS.webp" class="skill-icon"> HTML & CSS</span> <span>80%</span></h3>
+        <div class="skill-bar"><div class="fill-bar html"></div></div>
+      </div>
+
+      <div class="skill">
+        <h3><span><img src="git-vs-github.png" class="skill-icon"> Git & GitHub</span> <span>70%</span></h3>
+        <div class="skill-bar"><div class="fill-bar git"></div></div>
+      </div>
+
+      <div class="skill">
+        <h3><span><img src="python-logo-png-open-2000.png" class="skill-icon"> Python</span> <span>80%</span></h3>
+        <div class="skill-bar"><div class="fill-bar python"></div></div>
+      </div>
+
+      <div class="skill">
+        <h3><span><img src="django logo.png" class="skill-icon"> Django</span> <span>60%</span></h3>
+        <div class="skill-bar"><div class="fill-bar django"></div></div>
+      </div>
+
+      <div class="skill">
+        <h3><span><img src="figma.png" class="skill-icon"> Figma</span> <span>80%</span></h3>
+        <div class="skill-bar"><div class="fill-bar figma"></div></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

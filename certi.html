@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificates - Vishnu Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    html, body {
+      width: 100%;
+      min-height: 100vh;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 20px 40px;
+      background-color: rgba(0, 0, 0, 0.4);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo-port {
+      font-size: 28px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .navlinks a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 14px;
+      transition: color 0.3s ease;
+    }
+
+    .navlinks a:hover {
+      color: #ffba08;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropbtn {
+      font-size: 16px;
+      font-weight: 600;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      padding: 8px 14px;
+    }
+
+    .dropbtn::after {
+      content: " ▼";
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.8);
+      min-width: 160px;
+      z-index: 1;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: rgba(255,255,255,0.1);
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 40px 0 20px;
+      color: #ffba08;
+    }
+
+    .main-section {
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      max-width: 100%;
+    }
+
+    .cert-card {
+      min-width: 250px;
+      max-width: 250px;
+      background-color: rgba(255,255,255,0.08);
+      backdrop-filter: blur(6px);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, background 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .cert-card:hover {
+      transform: scale(1.05);
+      background-color: rgba(255,255,255,0.15);
+    }
+
+    .cert-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .cert-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .cert-title {
+      font-size: 1.1rem;
+      color: #ffdd57;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .navlinks {
+        justify-content: center;
+      }
+
+      .main-section {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="index.html" class="logo-port">Portfolio</a>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skill.html">Skills</a>
+        <a href="pro.html">Projects</a>
+        <a href="certi.html">Certificates</a>
+      <div class="dropdown">
+        <button class="dropbtn">Contact</button>
+        <div class="dropdown-content">
+          <a href="https://github.com/vishnuvardhan118">Github</a>
+          <a href="https://www.linkedin.com/in/vishnu-vardhan-693148290/">LinkedIn</a>
+          <a href="mailto:vishnu118k@gmail.com">Gmail</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Title -->
+  <h2>Certificates</h2>
+
+  <!-- Certificates Row -->
+  <div class="main-section">
+    <div class="cert-card">
+      <img src="webintern.jpg" alt="Python Development">
+      <div class="cert-title">Python FSD</div>
+      <p>Certificate of Virtual internship</p>
+    </div>
+    <div class="cert-card">
+      <img src="uipath.jpg" alt="Web Development">
+      <div class="cert-title">Ui Path</div>
+        <p>Certificate of Participation</p>
+
+    </div>
+    <div class="cert-card">
+      <img src="python.jpeg" alt="Python Advanced">
+      <div class="cert-title">Python Development</div>
+      <p>Certificate of Completion</p>
+    </div>
+    <div class="cert-card">
+      <img src="web.jpeg" alt="Full Stack">
+      <div class="cert-title">Web Development</div>
+      <p>Certificate of Completion</p>
+    </div>
+  </div>
+
+</body>
+</html>
